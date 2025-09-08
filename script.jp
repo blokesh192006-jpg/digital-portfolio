@@ -1,0 +1,20 @@
+// Student Resume Dynamic Script
+
+// Auto-fill current date in Declaration section
+document.addEventListener("DOMContentLoaded", function () {
+  let dateField = document.getElementById("current-date");
+  if (dateField) {
+    let today = new Date();
+    let formattedDate = today.toLocaleDateString("en-IN", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric"
+    });
+    dateField.textContent = formattedDate;
+  }
+});
+
+// Print Resume Button (optional)
+function printResume() {
+  window.print();
+}
