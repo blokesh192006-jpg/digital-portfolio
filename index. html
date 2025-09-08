@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Digital Portfolio</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1d2671, #c33764);
+      color: white;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+
+    nav {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    section h2 {
+      margin-bottom: 15px;
+      font-size: 2rem;
+      border-bottom: 2px solid #ffd700;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    section p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
+
+    .skills ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skills ul li {
+      background: #ffd700;
+      color: black;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    .mail {
+      color: #ffd700;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      margin-top: 30px;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Hi, I'm Lokesh B</h1>
+    <p>Aspiring Web Developer | Python Programmer | Tech Enthusiast</p>
+  </header>
+
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Hello! My name is <b>Lokesh B</b>. I am passionate about coding, creating projects, 
+      and building useful digital solutions. This portfolio highlights my skills, 
+      interests, and achievements in the world of technology.
+    </p>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2>My Skills</h2>
+    <ul>
+      <li>HTML & CSS</li>
+      <li>Python Programming</li>
+      <li>JavaScript</li>
+      <li>Data Structures</li>
+      <li>Problem Solving</li>
+      <li>Database Management</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:lokesh@example.com" class="mail">lokesh@example.com</a></p>
+    <p>Phone: +91 98765 43210</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Lokesh B | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
