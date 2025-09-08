@@ -1,0 +1,238 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Digital Portfolio — Your Name</title>
+  <meta name="description" content="Digital portfolio / resume" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#2563eb; /* blue */
+      --muted:#6b7280;
+      --bg:#0f172a;
+      --card:#0b1220;
+      --glass: rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,#071024 0%, #07102a 60%);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:32px;
+    }
+    .container{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:320px 1fr;gap:28px}/* Sidebar */
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;padding:20px;box-shadow:0 6px 20px rgba(2,6,23,0.6);}
+.profile-photo{width:96px;height:96px;border-radius:14px;object-fit:cover;border:3px solid rgba(255,255,255,0.04)}
+.name{font-size:20px;font-weight:700;margin-top:12px}
+.role{color:var(--muted);font-size:13px;margin-top:4px}
+.contact-list{margin-top:14px;font-size:14px;color:var(--muted)}
+.contact-list a{color:inherit;text-decoration:none}
+.skill{display:flex;justify-content:space-between;align-items:center;margin:8px 0}
+.skill .bar{height:8px;background:rgba(255,255,255,0.06);border-radius:999px;flex:1;margin-left:12px;overflow:hidden}
+.skill .bar > i{display:block;height:100%;background:var(--accent);border-radius:999px}
+.socials{display:flex;gap:8px;margin-top:12px}
+.btn{display:inline-block;padding:8px 12px;border-radius:8px;background:var(--glass);color:inherit;text-decoration:none;border:1px solid rgba(255,255,255,0.03);font-weight:600}
+
+/* Main */
+.heading{display:flex;justify-content:space-between;align-items:center}
+.headline{font-size:28px;font-weight:700}
+.sub{color:var(--muted);margin-top:6px}
+.section{margin-top:18px}
+.project{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:start;padding:14px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.02)}
+.project h4{margin:0;font-size:16px}
+.project p{margin:8px 0 0;color:var(--muted);font-size:14px}
+.meta{font-size:13px;color:var(--muted)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.chip{padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.02);font-size:13px;color:var(--muted)}
+
+/* Experience/Education rows */
+.row{display:flex;justify-content:space-between;gap:16px}
+.row-left{flex:1}
+.row-right{min-width:120px;text-align:right;color:var(--muted)}
+.muted{color:var(--muted)}
+
+/* Contact form (simple) */
+form input, form textarea{width:100%;padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:inherit;margin-top:8px}
+form button{margin-top:8px;background:var(--accent);border:none;padding:10px 12px;border-radius:8px;color:white;font-weight:700}
+
+/* Responsive */
+@media (max-width:880px){
+  .container{grid-template-columns:1fr}
+  .heading{flex-direction:column;align-items:flex-start;gap:12px}
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- SIDEBAR -->
+    <aside class="card">
+      <div style="display:flex;gap:12px;align-items:center">
+        <img class="profile-photo" src="https://via.placeholder.com/150" alt="Your photo">
+        <div>
+          <div class="name">Your Name</div>
+          <div class="role">Web Developer • Designer</div>
+        </div>
+      </div><div class="section contact-list">
+    <div class="muted">Contact</div>
+    <div style="margin-top:8px">
+      <div>Email: <a href="mailto:you@example.com">you@example.com</a></div>
+      <div>Phone: <a href="tel:+11234567890">+1 123 456 7890</a></div>
+      <div>Location: City, Country</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="muted">Skills</div>
+    <div style="margin-top:8px">
+      <div class="skill"><strong>HTML & CSS</strong><div class="bar" style="width:130px"><i style="width:92%"></i></div></div>
+      <div class="skill"><strong>JavaScript</strong><div class="bar" style="width:130px"><i style="width:84%"></i></div></div>
+      <div class="skill"><strong>Python</strong><div class="bar" style="width:130px"><i style="width:75%"></i></div></div>
+      <div class="skill"><strong>React</strong><div class="bar" style="width:130px"><i style="width:70%"></i></div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="muted">Social</div>
+    <div class="socials">
+      <a class="btn" href="#">GitHub</a>
+      <a class="btn" href="#">LinkedIn</a>
+      <a class="btn" href="#">Portfolio</a>
+    </div>
+  </div>
+
+  <div class="section">
+    <a class="btn" href="#">Download CV</a>
+  </div>
+</aside>
+
+<!-- MAIN CONTENT -->
+<main>
+  <div class="card">
+    <div class="heading">
+      <div>
+        <div class="headline">Your Name — <span class="muted">Web Developer</span></div>
+        <div class="sub">I build accessible, responsive websites and web apps. I love turning ideas into products.</div>
+      </div>
+      <div style="text-align:right">
+        <div class="meta">Available for freelance / full-time</div>
+        <div style="margin-top:10px">
+          <a class="btn" href="#projects">See Projects</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="about">
+      <h3 style="margin:0">About</h3>
+      <p class="muted" style="margin-top:8px">A brief paragraph about yourself. Mention years of experience, areas of focus, and the kind of work you're looking for. Keep it short and friendly.</p>
+    </div>
+
+    <div class="section" id="projects">
+      <h3 style="margin:0">Selected Projects</h3>
+
+      <div style="margin-top:12px">
+        <div class="project">
+          <div>
+            <h4>Project One — E‑commerce UI</h4>
+            <p>Responsive e-commerce front-end built with React. Product listing, cart, and checkout mockup.</p>
+            <div class="chips">
+              <span class="chip">React</span>
+              <span class="chip">Tailwind</span>
+              <span class="chip">Stripe</span>
+            </div>
+          </div>
+          <div class="meta">2024</div>
+        </div>
+
+        <div style="height:10px"></div>
+
+        <div class="project">
+          <div>
+            <h4>Project Two — Portfolio Template</h4>
+            <p>Single-page portfolio template with CMS-ready sections and deployment scripts.</p>
+            <div class="chips">
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">Netlify</span>
+            </div>
+          </div>
+          <div class="meta">2023</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="experience">
+      <h3 style="margin:0">Experience</h3>
+      <div style="margin-top:12px">
+        <div class="row">
+          <div class="row-left">
+            <strong>Frontend Developer</strong>
+            <div class="muted">Company Name — Built UI components, improved accessibility</div>
+          </div>
+          <div class="row-right">2022 — Present</div>
+        </div>
+
+        <div style="height:10px"></div>
+
+        <div class="row">
+          <div class="row-left">
+            <strong>Intern</strong>
+            <div class="muted">Another Company — Assisted on internal tooling</div>
+          </div>
+          <div class="row-right">2021 — 2022</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="education">
+      <h3 style="margin:0">Education</h3>
+      <div style="margin-top:12px">
+        <div class="row">
+          <div class="row-left">
+            <strong>Bachelor of Science in Computer Science</strong>
+            <div class="muted">University Name</div>
+          </div>
+          <div class="row-right">2018 — 2022</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="contact">
+      <h3 style="margin:0">Contact</h3>
+      <p class="muted" style="margin-top:8px">Use the form below to send a quick message. (This form is non-functional in this static file.)</p>
+      <form onsubmit="alert('This is a static demo — connect a backend to submit.') ; return false;">
+        <input type="text" placeholder="Your name" required />
+        <input type="email" placeholder="Your email" required />
+        <textarea rows="4" placeholder="Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+  </div>
+</main>
+
+  </div>  <!-- Small script to replace placeholder values quickly -->  <script>
+    // OPTIONAL: Replace these placeholders with your information programmatically
+    (function(){
+      // Change these values if you want quick customization
+      const data = {
+        name: 'Your Name',
+        role: 'Web Developer • Designer',
+        email: 'you@example.com',
+        phone: '+1 123 456 7890',
+        location: 'City, Country'
+      };
+      document.querySelectorAll('.name').forEach(el=>{ if(el.textContent.trim()==='Your Name') el.textContent = data.name });
+      document.querySelectorAll('.role').forEach(el=>{ if(el.textContent.includes('Web Developer')) el.textContent = data.role });
+      document.querySelector('a[href^="mailto:"]').textContent = data.email; document.querySelector('a[href^="mailto:"]').href = 'mailto:'+data.email;
+      document.querySelector('a[href^="tel:"]').textContent = data.phone; document.querySelector('a[href^="tel:"]').href = 'tel:'+data.phone.replace(/\s+/g,'');
+      const loc = document.querySelectorAll('.contact-list div')[2]; if(loc) loc.textContent = 'Location: ' + data.location;
+    })();
+  </script></body>
+</html>
