@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio in JavaScript</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1d2671, #c33764);
+      color: white;
+      line-height: 1.6;
+    }
+    header, nav, section, footer {
+      text-align: center;
+      margin: 20px auto;
+      max-width: 900px;
+      padding: 20px;
+      border-radius: 15px;
+      background: rgba(0,0,0,0.3);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    }
+    header h1 { font-size: 3rem; margin-bottom: 10px; }
+    header p { font-size: 1.2rem; font-style: italic; }
+    nav { background: rgba(255,255,255,0.1); }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover { color: #ffd700; }
+    section h2 {
+      border-bottom: 2px solid #ffd700;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .skills ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      padding: 0;
+    }
+    .skills ul li {
+      background: #ffd700;
+      color: black;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+    footer { background: rgba(255,255,255,0.1); }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script>
+    // Portfolio Data
+    const portfolio = {
+      name: "Lokesh B",
+      tagline: "Aspiring Web Developer | Python Programmer | Tech Enthusiast",
+      about: "Hello! My name is Lokesh B. I am passionate about coding, creating projects, and building useful digital solutions. This portfolio highlights my skills, interests, and achievements in the world of technology.",
+      skills: ["HTML & CSS", "Python Programming", "JavaScript", "Data Structures", "Problem Solving", "Database Management"],
+      email: "lokesh@example.com",
+      phone: "+91 98765 43210",
+      footer: "© 2025 Lokesh B | All Rights Reserved"
+    };
+
+    // Root container
+    const app = document.getElementById("app");
+
+    // Header
+    const header = document.createElement("header");
+    header.innerHTML = `<h1>Hi, I'm ${portfolio.name}</h1><p>${portfolio.tagline}</p>`;
+    app.appendChild(header);
+
+    // Navigation
+    const nav = document.createElement("nav");
+    nav.innerHTML = `
+      <a href="#about">About Me</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    `;
+    app.appendChild(nav);
+
+    // About Section
+    const about = document.createElement("section");
+    about.id = "about";
+    about.innerHTML = `<h2>About Me</h2><p>${portfolio.about}</p>`;
+    app.appendChild(about);
+
+    // Skills Section
+    const skills = document.createElement("section");
+    skills.id = "skills";
+    skills.className = "skills";
+    skills.innerHTML = "<h2>My Skills</h2>";
+    const ul = document.createElement("ul");
+    portfolio.skills.forEach(skill => {
+      let li = document.createElement("li");
+      li.textContent = skill;
+      ul.appendChild(li);
+    });
+    skills.appendChild(ul);
+    app.appendChild(skills);
+
+    // Contact Section
+    const contact = document.createElement("section");
+    contact.id = "contact";
+    contact.innerHTML = `
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:${portfolio.email}" style="color:#ffd700">${portfolio.email}</a></p>
+      <p>Phone: ${portfolio.phone}</p>
+    `;
+    app.appendChild(contact);
+
+    // Footer
+    const footer = document.createElement("footer");
+    footer.innerHTML = `<p>${portfolio.footer}</p>`;
+    app.appendChild(footer);
+  </script>
+</body>
+</html>
